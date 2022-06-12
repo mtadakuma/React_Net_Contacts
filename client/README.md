@@ -1,70 +1,115 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React and .NET with MongoDB Contacts Store
 
-## Available Scripts
+This is a project for a contacts storing application with React as it's frontend and a .NET REST API as the backend, this project also persists the information in MongoDB and includes the Swagger documentation for the Rest API calls.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Client:** React, CSS.
 
-### `npm test`
+**Server:** .NET, MongoDB, Swagger
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- react
+- react-router-dom
+- dotnet
+- MongoDB
+- mongosh
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+**Instructions for MongoDB**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open mongosh and add the path
+```bash
+  mongodb://localhost:27017
+```
+Then add the following code to create a new database
+```bash
+  use ContactsStore
+```
+Create a collection
+```bash
+  db.createCollection('Contacts')
+```
+Insert two registries to the collection
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  db.Contacts.insertMany([{ "Username": "JosePerez", "Email": "jperez@gmail.com", "Telefono": "02231512345678" }, { "Username": "PaulaLopez", "Email": "plopez@gmail.com", "Telefono": "0111587654321" }])
+```
+Check if the registries were correctly inserted
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  db.Contacts.find().pretty()
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+**Running the project**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  git clone https://github.com/mtadakuma/React_Net_Contacts.git
+```
 
-### Code Splitting
+**To run the serverside webapi**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Go to the project directory
 
-### Analyzing the Bundle Size
+```bash
+  cd React_NET_Contacts
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Go to WebApi folder
+```bash
+  cd ContactsStoreApi
+```
 
-### Making a Progressive Web App
+Run the server side Api
+```bash
+  dotnet run
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**To run the clientside in React**:
 
-### Advanced Configuration
+Go to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+  cd React_NET_Contacts
+```
 
-### Deployment
+Go to React folder
+```bash
+  cd client
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Install dependencies
 
-### `npm run build` fails to minify
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Start the server
+
+```bash
+  npm run start
+```
+
+**To check Swagger documentation**:
+
+While the serverside webapi is running go to the following path
+
+https://localhost:7235/swagger/index.html
+
+or 
+
+http://localhost:5021/swagger/index.html
+## Authors
+
+- [@mtadakuma](https://github.com/mtadakuma)
+

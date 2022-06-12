@@ -109,6 +109,18 @@ https://localhost:7235/swagger/index.html
 or 
 
 http://localhost:5021/swagger/index.html
+
+## Troubleshooting
+
+In case any error appears make sure to have the following softwares
+
+- MongoDB Community
+https://www.mongodb.com/try/download/community
+- MongoDB Shell
+https://www.mongodb.com/try/download/shell
+- dotnet SDK
+https://dotnet.microsoft.com/en-us/download 
+
 ## Authors
 
 - [@mtadakuma](https://github.com/mtadakuma)
