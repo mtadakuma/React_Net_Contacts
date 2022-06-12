@@ -67,7 +67,7 @@ const CreateContact = () => {
           />
         </div>
         <div className='input-container'>
-          <label for='email'>Email</label>
+          <label for='email'>Teléfono</label>
           <input
             type="number"
             name="telefono"
