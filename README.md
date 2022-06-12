@@ -17,8 +17,8 @@ This is a project for a contacts storing application with React as it's frontend
 - react
 - react-router-dom
 - dotnet
-- MongoDB
-- mongosh
+- MongoDB Compass
+- mongoDB Shell (mongosh)
 
 ## Run Locally
 
