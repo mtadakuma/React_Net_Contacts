@@ -1,0 +1,69 @@
+.contacts-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.contact-card{
+    border: 2px solid navy;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    background-color:aliceblue;
+}
+
+.user-icon-img{
+    width: 200px;
+    margin: 10px;
+    border-radius:50%;
+}
+
+.contact-info > h6{
+    margin:0;
+    color:rgb(176, 176, 176)
+}
+
+.contact-info > h2{
+    margin-top:0;
+    font-size: 16px;
+    color:black;
+}
+
+.contact-controls{
+    display:flex;
+    flex-direction:column;
+}
+
+.modify-btn,
+.delete-btn{
+    width:100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius:5px;
+    border:none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.modify-btn{
+    background-color:rgb(176, 227, 255);
+    color:darkblue;
+}
+
+.modify-btn:hover{
+    background-color:dodgerblue;
+    color:white;
+    box-shadow: 1px 1px 6px black;
+}
+
+.delete-btn{
+    background-color:rgb(255, 198, 176);
+    color:brown;
+}
+
+.delete-btn:hover{
+    background-color:coral;
+    color:white;
+    box-shadow: 1px 1px 6px black;
+}

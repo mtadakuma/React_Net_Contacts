@@ -1,0 +1,24 @@
+.create-form-container{
+    padding: 50px 0;
+}
+
+.create-icon{
+    width: 150px;
+}
+
+
+.create-finish-btn{
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color:rgb(172, 238, 172);
+    border:none;
+}
+
+.create-finish-btn:hover{
+    background-color:green;
+    color:white;
+    box-shadow: 2px 2px 5px black;
+}
