@@ -3,7 +3,7 @@
 
 This is a project for a contacts storing application with React as it's frontend and a .NET REST API as the backend, this project also persists the information in MongoDB and includes the Swagger documentation for the Rest API calls.
 
-
+![demo_contacts](https://github.com/mtadakuma/React_Net_Contacts/blob/master/Demo_Contacts.gif)
 
 ## Tech Stack
 
